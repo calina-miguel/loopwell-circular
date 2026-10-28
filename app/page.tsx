@@ -1,4 +1,6 @@
 import "./loopwell.css";
+import "./pathway.css";
+import { Pathway } from "./pathway";
 
 export const metadata = { title: "Loopwell | Keep value in motion", description: "A circular commerce path for reuse, repair, and the next life of good products." };
 
@@ -13,7 +15,7 @@ export default function Page() {
     </section>
     <div className="loop-ticker" aria-label="Reuse, repair, return"><div className="loop-ticker-track"><span>REUSE</span><b>↗</b><span>REPAIR</span><b>↗</b><span>RETURN</span><b>↗</b><span>REUSE</span><b>↗</b><span>REPAIR</span><b>↗</b><span>RETURN</span><b>↗</b></div></div>
     <section className="loop-moves" id="moves"><div className="loop-section-heading"><p className="loop-kicker">A ROUTE THAT COMES FULL CIRCLE</p><h2>Make the next<br />life <i>obvious.</i></h2><p>Turn interest into a reason to return, with a useful step at every point in the product's life.</p></div><div className="loop-move-list">{moves.map(([n,title,copy])=><article key={n} className="loop-move"><span>{n}</span><h3>{title}</h3><p>{copy}</p><b aria-hidden="true">↗</b></article>)}</div></section>
-    <section className="loop-invite"><div><p className="loop-kicker">KEEP THE GOOD GOING</p><h2>Make room for<br /><i>another round.</i></h2><p>Get a focused reach path for the circular idea you're ready to grow.</p></div><form><span className="loop-form-label">THE LOOPWELL NOTE / 01</span><label htmlFor="loop-email">Where should your path land?</label><div className="loop-form-row"><input id="loop-email" type="email" placeholder="Email address" required/><button type="submit" aria-label="Send the reach path">↗</button></div><small>One useful next step, no clutter.</small></form></section>
+    <section className="loop-invite"><div><p className="loop-kicker">KEEP THE GOOD GOING</p><h2>Make room for<br /><i>another round.</i></h2><p>Choose the next chapter for an item or offer in your circular store.</p></div><Pathway /></section>
     <footer className="loop-footer"><a href="#loop-top" className="loop-brand"><span className="loop-mark">L<span>↗</span></span>LOOPWELL</a><span>Less take. More life.</span><span>© 2026 / LOOPWELL CIRCULAR</span></footer>
   </main>;
 }
