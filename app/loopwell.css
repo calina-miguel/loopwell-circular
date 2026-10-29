@@ -13,3 +13,20 @@
 /* Loopwell uses a round geometric face to echo reuse and circularity. */
 .loop-page :is(h1,h2,h3){font-family:'Century Gothic','Tw Cen MT',Arial,sans-serif;font-weight:600;letter-spacing:-.055em}
 .loop-page :is(.loop-brand,.loop-nav-note,.loop-footer){font-family:'Segoe UI',Arial,sans-serif;letter-spacing:.14em}
+
+/* Loopwell presents the offer as a closed-loop system, not a linear checklist. */
+.loop-hero{min-height:0;grid-template-columns:1fr 1fr;padding-block:68px 60px}
+.loop-ticker{display:none}
+.loop-moves{grid-template-columns:1fr;padding-block:100px 115px;gap:34px}
+.loop-section-heading{display:grid;grid-template-columns:1fr 1fr;align-items:end;column-gap:30px}
+.loop-section-heading .loop-kicker{grid-column:1/-1}
+.loop-section-heading h2{margin:18px 0 0}
+.loop-section-heading>p:last-child{justify-self:end;max-width:340px;margin:0 0 8px}
+.loop-move-list{display:grid;grid-template-columns:repeat(3,1fr);position:relative;gap:0;border:1px solid #d6dbd1;border-radius:50%;padding:28px;aspect-ratio:2.35;align-items:center}
+.loop-move-list::before{content:"";position:absolute;inset:12%;border:1px dashed #aab69f;border-radius:50%;pointer-events:none}
+.loop-move{position:relative;z-index:1;min-height:0;min-width:0;height:100%;padding:20px;display:flex;flex-direction:column;justify-content:center;gap:14px;border:0;text-align:center}
+.loop-move:last-child{border:0}.loop-move:hover{padding-inline:20px;background:#e9edde;border-radius:50%}
+.loop-move>span{align-self:center;padding:0;width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--loop-forest);border-radius:50%;background:var(--loop-white)}
+.loop-move h3{font-size:clamp(1rem,1.7vw,1.5rem)}.loop-move p{margin:0;font-size:10px}.loop-move>b{position:absolute;right:10%;top:48%;transform:translateY(-50%)}
+.loop-invite{margin-bottom:25px}
+@media(max-width:800px){.loop-section-heading{grid-template-columns:1fr}.loop-section-heading .loop-kicker{grid-column:auto}.loop-section-heading>p:last-child{justify-self:start;margin-top:14px}.loop-move-list{aspect-ratio:auto;grid-template-columns:1fr;border-radius:30px;padding:10px}.loop-move-list::before{inset:15% 8%;border-radius:30px}.loop-move{min-height:165px;padding:18px 34px}.loop-move:hover{border-radius:18px}.loop-move>b{right:14%;top:50%}}
